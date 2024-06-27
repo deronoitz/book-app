@@ -1,0 +1,21 @@
+.pagination {
+  margin: 20px 0;
+}
+
+.link {
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 0 5px;
+  background-color: $light-hover-color;
+  font-size: 16px;
+  transition: .15s;
+
+  &:hover {
+    background-color: $text-content-color;
+  }
+
+  &.active {
+    background-color: #1ed760;
+    color: #000;
+  }
+}

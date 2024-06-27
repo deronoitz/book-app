@@ -1,0 +1,30 @@
+.toastContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+}
+
+.toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.closeButton {
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  cursor: pointer;
+}

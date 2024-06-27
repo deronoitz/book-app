@@ -1,0 +1,18 @@
+.header {
+  padding: 54px;
+  background: linear-gradient(180deg, $header-color-1, $header-color-2);
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 74px;
+}
+
+.header p {
+  color: $text-content-color;
+  font-size: 14px;
+}
+
+.header a {
+  color: #fff;
+}

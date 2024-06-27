@@ -1,0 +1,94 @@
+.bookDetailsContainer {
+  padding: 30px 74px;
+  background: linear-gradient(180deg, #323232, #151515);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.backButton {
+  display: inline-flex;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.contentWrapper {
+  margin-top: 54px;
+
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-family: $global-font-family;
+  }
+
+  p {
+    color: $text-content-color;
+    max-width: 340px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .images {
+    width: 50%;
+    text-align: center;
+    z-index: 2;
+
+    img {
+      object-fit: cover;
+      box-shadow: 10px 0 40px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .textContent {
+    margin-left: 20px;
+    width: 50%;
+    z-index: 1;
+  }
+
+  .textDetails {
+    margin-top: 70px;
+    position: relative;
+    z-index: 2;
+
+    & > div {
+      margin-top: 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100vh;
+      top: -40px;
+      right: -12%;
+      width: 100vw;
+      background: linear-gradient(180deg, #00000036, #0000005c);
+      z-index: -5;
+    }
+  }
+
+  .favoriteBtn {
+    margin-top: 40px;
+    &:hover svg {
+      fill: #000;
+    }
+
+    svg {
+      display: inline-block;
+      fill: #fff;
+      margin-right: 10px;
+    }
+  }
+
+  .favoriteBtnActive {
+    border-color: $secondary-color-1;
+    background-color: $secondary-color-1;
+    color: #000;
+
+    svg {
+      fill: #000;
+    }
+  }
+}
