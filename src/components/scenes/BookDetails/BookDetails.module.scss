@@ -7,7 +7,7 @@
 
 .backButton {
   display: inline-flex;
-
+  cursor: pointer;
   &:hover {
     text-decoration: underline;
   }

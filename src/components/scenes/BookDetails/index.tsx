@@ -7,8 +7,10 @@ import type { BookItemType } from "@/entities/Book";
 import styles from "./BookDetails.module.scss";
 import { formatDefaultTime } from "@/helpers/date";
 import { useBooks } from "@/hooks/books";
+import { useRouter } from "next/router";
 
 const BookDetails: FC<{ book: BookItemType }> = ({ book }) => {
+  const router = useRouter();
   const { handleSetFavorite, isFavorite } = useBooks(book);
 
   const publicationDate = useMemo(
@@ -16,13 +18,15 @@ const BookDetails: FC<{ book: BookItemType }> = ({ book }) => {
     [book.publicationDate]
   );
 
+  function handlePrevious() {
+    router.back();
+  }
+
   return (
     <div className={styles.bookDetailsContainer}>
-      <Link
+      <a
         className={`${styles.backButton} items-center`}
-        href={{
-          pathname: "/",
-        }}
+        onClick={handlePrevious}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +45,7 @@ const BookDetails: FC<{ book: BookItemType }> = ({ book }) => {
         </svg>
         &nbsp;
         Back to Collections
-      </Link>
+      </a>
       <div className={`flex ${styles.contentWrapper}`}>
         <div className={styles.images}>
           <ImageWithFallback

@@ -11,14 +11,14 @@ export const endpoints = {
 };
 
 const booksAPI = {
-  getBooks(options?: SWRConfiguration): SWRResponse {
+  useBooks(options?: SWRConfiguration): SWRResponse {
     return useSWR<BookItemType[]>(endpoints.getBookList, fetcher, {
       revalidateOnFocus: false,
       ...options,
     });
   },
 
-  getBookDetails(id: string) {
+  useBookDetails(id: string) {
     return useSWR<BookItemType>(endpoints.getBookDetails(id), fetcher);
   },
 

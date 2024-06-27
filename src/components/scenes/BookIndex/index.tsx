@@ -14,7 +14,7 @@ const BookIndex: FC = () => {
     query: { page = 1 },
   } = useRouter();
 
-  const { data} = booksAPI.getBooks();
+  const { data} = booksAPI.useBooks();
 
   /**
    * Function to handle pagination

@@ -48,7 +48,7 @@ export const useBooks = (book: BookItemType): BooksHookProps => {
     );
 
     setIsFavorite(!!isItemFavorite);
-  }, []);
+  }, [book.id]);
 
   return {
     handleSetFavorite,
