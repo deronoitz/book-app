@@ -23,22 +23,19 @@ interface ToastProviderProps {
 export const ToastProvider: React.FC<ToastProviderProps> = ({ children }) => {
   const [toasts, setToasts] = useState<string[]>([]);
 
-  const showToast = (message: string) => {
+  function showToast(message: string) {
     setToasts([...toasts, message]);
     setTimeout(() => {
       setToasts((currentToasts) => currentToasts.slice(1));
     }, 2000); // Remove the toast after 2 seconds
-  };
+  }
 
   return (
     <ToastContext.Provider value={{ showToast }}>
       {children}
       <div className={styles.toastContainer}>
         {toasts.map((message, index) => (
-          <Toast
-            key={index}
-            message={message}
-          />
+          <Toast key={index} message={message} />
         ))}
       </div>
     </ToastContext.Provider>

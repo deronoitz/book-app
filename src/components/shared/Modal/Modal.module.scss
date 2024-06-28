@@ -1,0 +1,38 @@
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.75);
+}
+
+.modalBox {
+  background: #161616;
+  max-width: 544px;
+  width: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 30px 30px 30px;
+  border-radius: 16px;
+  border: solid 2px #222;
+
+  h2 {
+    font-size: 36px;
+  }
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.closeBtn {
+  padding: 10px;
+  background: none;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

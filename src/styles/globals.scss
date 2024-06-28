@@ -26,7 +26,6 @@ input {
   color: #fff;
   font-family: $global-font-family;
   font-size: 16px;
-  margin-bottom: 12px;
 }
 
 h1,
@@ -103,4 +102,11 @@ table {
     color: #000;
     border-color: #fff;
   }
+}
+
+.input-error-msg {
+  font-size: 14px;
+  color: red;
+  display: inline-block;
+  margin-bottom: 20px;
 }
